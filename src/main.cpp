@@ -256,8 +256,8 @@ float readRainsensor()
 {
     float _rainAmount = 0.0;
 
-    // Read 1 holding register at 0x0001 (sensor value = mm * 10)
-    uint8_t _result = modbus.readHoldingRegisters(0x0001, 1);
+    // Read 1 holding register at 0x0000 (sensor value = mm * 10)
+    uint8_t _result = modbus.readHoldingRegisters(0x0000, 1);
     String statusLine;
 
     if (_result == modbus.ku8MBSuccess)
